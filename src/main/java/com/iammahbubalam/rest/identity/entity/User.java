@@ -130,17 +130,7 @@ public class User implements UserDetails {
                 .collect(Collectors.toSet()); // Use a Set to ensure no duplicate authorities
     }
 
-    @Override
-    public boolean isAccountNonExpired() {
-        // We can add logic for this later if needed (e.g., based on a subscription date)
-        return true;
-    }
 
-    @Override
-    public boolean isCredentialsNonExpired() {
-        // Can be used to force password resets periodically
-        return true;
-    }
 
     // --- Custom Logic Methods ---
     public void addRole(Role role) {
